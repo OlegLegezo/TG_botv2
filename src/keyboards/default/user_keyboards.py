@@ -20,6 +20,10 @@ commands_default_keyboard = ReplyKeyboardMarkup(
             KeyboardButton(text='Скрыть меню')
         ],
         [
+            KeyboardButton(text='item')
+        ]
+,
+        [
             KeyboardButton(text='Удалить аккаунт')
         ]
     ],

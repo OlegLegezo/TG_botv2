@@ -55,15 +55,53 @@ class Database:
         sql, parameters = self.format_args(sql, parameters=kwargs)
         return self.execute(sql, parameters=parameters, commit=True)
 
+    def update_user_phone(self, id: int, phone: str):
+        sql = 'UPDATE Users SET phone=? WHERE id=?'
+        return self.execute(sql, parameters=(phone, id), commit=True)
+
+        # создаем таблицу
+
+    def create_table_items(self):
+        sql = """
+            CREATE TABLE Items(
+            id int NOT NULL,
+            name text,
+            count int,
+            photo_path text,
+            PRIMARY KEY (id)
+            );
+            """
+        self.execute(sql, commit=True)
+
+    def add_item(self, id: int, name: str = None, count: int = 0, photo_path: str = ''):
+        sql = 'INSERT INTO Items(id, name, count, photo_path) VALUES(?, ?, ?, ?)'
+        parameters = (id, name, count, photo_path)
+        self.execute(sql, parameters, commit=True)
+
+    def select_items_info(self, **kwargs) -> list:
+        sql = 'SELECT * FROM Items WHERE '
+        sql, parameters = self.format_args(sql, kwargs)
+        return self.execute(sql, parameters, fetchall=True)
+
+    def select_all_items(self) -> list:
+        sql = 'SELECT * FROM Items'
+        return self.execute(sql, fetchall=True)
+
+    def update_item_count(self, id: int, count: str):
+        sql = 'UPDATE Items SET count=? WHERE id=?'
+        return self.execute(sql, parameters=(count, id), commit=True)
+
+    def get_items_count(self) -> int:
+        sql = 'SELECT * FROM Items'
+        return len(self.execute(sql, fetchall=True))
+
     def delete_all(self):
         self.execute('DELETE FROM Users WHERE True', commit=True)
+        self.execute('DELETE FROM Items WHERE True', commit=True)
 
     def drop_all(self):
         self.execute('DROP TABLE Users', commit=True)
-
-    def update_user_phone(self, id:int, phone:str):
-        sql = 'UPDATE Users SET phone=? WHERE id=?'
-        return self.execute(sql, parameters=(phone, id), commit=True)
+        self.execute('DROP TABLE Items', commit=True)
 
     @staticmethod
     def format_args(sql, parameters: dict) -> tuple:
