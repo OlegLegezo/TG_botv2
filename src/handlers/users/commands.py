@@ -51,11 +51,11 @@ async def answer_start_command(message: types.Message):
     db.delete_user(id=message.from_user.id)
 
 
-@dp.message_handler(text=['Список товаров'])
+@dp.message_handler(text=['Список товаров','item','Овощи'])
 @dp.message_handler(commands=['item'])
 async def answer_menu_command(message: types.Message):
     first_item_info = db.select_items_info(id=1)
-    first_item_info = first_item_info(0)
+    first_item_info = first_item_info[0]
     _, name, count, photo_path = first_item_info
     item_text = f"Название товара: {name}" \
                 f"\nКол-во товара: {count}"

@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ce0858aa-1664-4659-8b6f-018021a215f2" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/inlines/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/inlines/callback_data.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/keyboards/inlines/user_keyboards.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db_api/database/shop_database.db" beforeDir="false" afterPath="$PROJECT_DIR$/src/db_api/database/shop_database.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/db_api/db_requests.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/db_api/db_requests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/handlers/users/commands.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/handlers/users/commands.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/keyboards/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/keyboards/__init__.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/keyboards/default/user_keyboards.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/keyboards/default/user_keyboards.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/test.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/keyboards/inlines/callback_data.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/keyboards/inlines/callback_data.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
